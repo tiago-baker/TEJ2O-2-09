@@ -1,8 +1,32 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: XXX
- * Created on: Sep 2020
- * This program ...
+ * Created by: Tiago Baker
+ * Created on: Oct 2025
+ * This program plys rock, paper, sicssors 
 */
 
-basic.showString('Hello, World!')
+let randomNumber:number = 0
+
+randomNumber = -1
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+input.onGesture(Gesture.Shake, function ()
+{
+    randomNumber = randint(0, 2)
+    basic.clearScreen()
+
+    if (randomNumber == 0) {
+        basic.showIcon(IconNames.Square)
+    }
+
+    if (randomNumber == 1) {
+        basic.showIcon(IconNames.Paper)
+
+    if (randomNumber == 2) {
+        basic.showIcon(IconNames.Scissors)
+    }
+
+    basic.pause(5000)
+    basic.showIcon(IconNames.Happy)
+})
