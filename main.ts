@@ -5,7 +5,9 @@
  * This program plays rock paper scissers
 */
 
+// variables
 let randomNumber : number = -1
+
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
