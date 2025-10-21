@@ -37,3 +37,21 @@ input.onGesture(Gesture.Shake, function ()
     basic.showIcon(IconNames.Happy)
 })
 
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+let scoreNumber : number = 0
+
+input.onButtonPressed(Button.A, function() {
+    scoreNumber = scoreNumber + 1
+    basic.pause(5000)
+})
+
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+
+input.onButtonPressed(Button.B, function() {
+    
+    basic.showString("Score:" + scoreNumber)
+    basic.pause(5000)
+})
