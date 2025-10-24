@@ -2,7 +2,7 @@
  *
  * Created by: Tiago baker
  * Created on: Oct 2025
- * This program plays rock, paper, scissers
+ * This program plays rock, paper, scissers.
 */
 
 // variables
