@@ -1,6 +1,6 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Tiago baker
+ * Created by: Tiago Baker
  * Created on: Oct 2025
  * This program plays rock, paper, scissers.
 */
@@ -51,6 +51,8 @@ input.onButtonPressed(Button.A, function()
     scoreNumber = scoreNumber + 1
     basic.pause(1000)
     basic.showIcon(IconNames.Yes)
+    basic.pause(5000)
+    basic.showIcon(IconNames.Happy)
 })
 
 // show score
