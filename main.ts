@@ -2,15 +2,17 @@
  *
  * Created by: Tiago baker
  * Created on: Oct 2025
- * This program plays rock paper scissers
+ * This program plays rock, paper, scissers
 */
 
 // variables
-let randomNumber : number = -1
+let randomNumber : number = null
 
+// setup
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
+// shake icons
 input.onGesture(Gesture.Shake, function ()
 {
     randomNumber = randint(0, 2)
@@ -42,8 +44,10 @@ input.onGesture(Gesture.Shake, function ()
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
+// variables
 let scoreNumber : number = 0
 
+// add win to score
 input.onButtonPressed(Button.A, function() {
     scoreNumber = scoreNumber + 1
     basic.pause(5000)
@@ -52,6 +56,7 @@ input.onButtonPressed(Button.A, function() {
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
+// show score
 input.onButtonPressed(Button.B, function() {
     
     basic.showString("Score:" + scoreNumber)
