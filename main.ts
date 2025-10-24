@@ -48,7 +48,8 @@ basic.showIcon(IconNames.Happy)
 let scoreNumber : number = 0
 
 // add win to score
-input.onButtonPressed(Button.A, function() {
+input.onButtonPressed(Button.A, function() 
+{
     scoreNumber = scoreNumber + 1
     basic.pause(5000)
 })
@@ -57,7 +58,8 @@ basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 // show score
-input.onButtonPressed(Button.B, function() {
+input.onButtonPressed(Button.B, function() 
+{
     
     basic.showString("Score:" + scoreNumber)
     basic.pause(5000)
