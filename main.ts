@@ -7,21 +7,24 @@
 
 // variables
 let randomNumber : number = null
+let scoreNumber: number = 0
 
 // setup
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
 // shake icons
-input.onGesture(Gesture.Shake, function ()
-{
+input.onGesture(Gesture.Shake, function () {
+    // get randomNumber
     randomNumber = randint(0, 2)
     basic.clearScreen()
     
+    // rock icon
     if (randomNumber == 0) {
         basic.showIcon(IconNames.Square)
     }
-
+    
+    // paper icon
     if (randomNumber == 1) {
         
         basic.showLeds(`
@@ -32,7 +35,8 @@ input.onGesture(Gesture.Shake, function ()
         . . . . .
         `)
     }
-
+    
+    // scissers icon
     if (randomNumber == 2) {
         basic.showIcon(IconNames.Scissors)
     }
@@ -40,9 +44,6 @@ input.onGesture(Gesture.Shake, function ()
     basic.pause(5000)
     basic.showIcon(IconNames.Happy)
 })
-
-// variables
-let scoreNumber : number = 0
 
 // add win to score
 input.onButtonPressed(Button.A, function() 
@@ -56,8 +57,7 @@ input.onButtonPressed(Button.A, function()
 })
 
 // show score
-input.onButtonPressed(Button.B, function() 
-{
+input.onButtonPressed(Button.B, function() {
     basic.clearScreen()
     basic.showString("Score:" + scoreNumber)
     basic.pause(5000)
